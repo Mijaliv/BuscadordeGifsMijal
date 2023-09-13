@@ -8,7 +8,7 @@ const resultados = document.querySelector(".resultados")
 
 buscar.addEventListener ("click", () => {
     resultados.innerHTML = "";
-    const url =`https://tenor.googleapis.com/v2/search?q=${termino.value}&key=${ApiKey}&client_key=my_test_app&limit=25`
+    const url =`https://tenor.googleapis.com/v2/search?q=${termino.value}&key=${ApiKey}&client_key=my_test_app&limit=9`
     const peticion = fetch(url)
 
     peticion
