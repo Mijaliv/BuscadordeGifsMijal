@@ -18,10 +18,26 @@ buscar.addEventListener ("click", () => {
         })
         .then((response) => {
             response.results.forEach(element => {
+                const gifContainer = document.createElement("div");
+                gifContainer.classList.add("gif-container");
+
                 const urlImg = element.media_formats.gif.url;
                 const img = document.createElement("Img");
                 img.src = urlImg;
-                resultados.appendChild(img);
+
+                const previewLink = document.createElement("a");
+                previewLink.href = urlImg;
+                previewLink.textContent = "Vista previa";
+                previewLink.target = "_blank";
+                previewLink.classList.add("preview-link");
+
+                img.addEventListener("click", () => {
+                    previewLink.classList.toggle("visible");
+                });
+
+                gifContainer.appendChild(img);
+                gifContainer.appendChild(previewLink);
+                resultados.appendChild(gifContainer);
                 
             })
             console.log(response)

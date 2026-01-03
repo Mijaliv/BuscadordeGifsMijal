@@ -84,3 +84,76 @@ h1{
 .buscar:hover{
     background-color: #ffa0fc;
 }
+
+.preview-link {
+    display: none;
+    text-align: center;
+    margin-top: 5px;
+    color: #f60aee;
+    text-decoration: none;
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.preview-link.visible {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .resultados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .resultados {
+        grid-template-columns: 1fr;
+    }
+
+    .resultados img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .termino {
+        width: 90%;
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .buscar {
+        width: 90px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .resultados img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .termino {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .buscar {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
